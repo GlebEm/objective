@@ -48,35 +48,59 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        String grandpaName = reader.readLine();
+        Cat catGrandPa = new Cat(grandpaName, null, null);
+
+        String grandmaName = reader.readLine();
+        Cat catGrandMa = new Cat(grandmaName, null, null);
+
+        String nameFather = reader.readLine();
+        Cat catFather = new Cat(nameFather, null, catGrandPa);
+
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName);
+        Cat catMother = new Cat(motherName, catGrandMa, null);
 
         String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother);
+        Cat catDaughter = new Cat(daughterName, catMother, catFather);
 
+        String sonName = reader.readLine();
+        Cat catSon = new Cat(sonName, catMother, catFather);
+
+
+        System.out.println(catGrandPa);
+        System.out.println(catGrandMa);
+        System.out.println(catFather);
         System.out.println(catMother);
         System.out.println(catDaughter);
+        System.out.println(catSon);
     }
 
     public static class Cat {
         private String name;
-        private Cat parent;
+        private Cat parentf;
+        private Cat parentm;
+
 
         Cat(String name) {
             this.name = name;
         }
 
-        Cat(String name, Cat parent) {
+        Cat(String name, Cat parentM, Cat parentF) {
             this.name = name;
-            this.parent = parent;
+            this.parentm = parentM;
+            this.parentf = parentF;
         }
 
         @Override
         public String toString() {
-            if (parent == null)
-                return "The cat's name is " + name + ", no mother ";
+            if (parentf == null & parentm == null)
+                return "The cat's name is " + name + ", no mother, no father ";
+            else if (parentf == null && parentm != null)
+                return "The cat's name is " + name + ", mother is " + parentm.name + ", no father ";
+            else if (parentm == null && parentf != null)
+                return "The cat's name is " + name + ", no mother, father is " + parentf.name;
             else
-                return "The cat's name is " + name + ", mother is " + parent.name;
+                return "The cat's name is " + name + ", mother is " + parentm.name + ", father is " + parentf.name;
         }
     }
 

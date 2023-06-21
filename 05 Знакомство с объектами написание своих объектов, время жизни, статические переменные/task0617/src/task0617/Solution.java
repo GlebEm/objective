@@ -1,23 +1,35 @@
 package task0617;
 
 /* 
-Р‘Р»РѕРєРЅРѕС‚ РґР»СЏ РЅРѕРІС‹С… РёРґРµР№
-1. Р’ РєР»Р°СЃСЃРµ Solution СЃРѕР·РґР°С‚СЊ public static РєР»Р°СЃСЃ Idea.
-2. Р’ РєР»Р°СЃСЃРµ Idea СЃРѕР·РґР°С‚СЊ РјРµС‚РѕРґ public String getDescription(), РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РІРѕР·РІСЂР°С‰Р°С‚СЊ Р»СЋР±СѓСЋ СЃС‚СЂРѕРєСѓ.
-3. Р’ РєР»Р°СЃСЃРµ Solution СЃРѕР·РґР°Р№ СЃС‚Р°С‚РёС‡РµСЃРєРёР№ РјРµС‚РѕРґ public void printIdea(Idea idea), РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РІС‹РІРѕРґРёС‚СЊ РЅР° СЌРєСЂР°РЅ РѕРїРёСЃР°РЅРёРµ РёРґРµРё - СЌС‚Рѕ С‚Рѕ, С‡С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµС‚ РјРµС‚РѕРґ getDescription().
+Блокнот для новых идей
+1. В классе Solution создать public static класс Idea.
+2. В классе Idea создать метод public String getDescription(), который будет возвращать любую строку.
+3. В классе Solution создай статический метод public void printIdea(Idea idea), который будет выводить на экран описание идеи - это то, что возвращает метод getDescription().
 
 
 Requirements:
-1. Р’ РєР»Р°СЃСЃРµ Solution СЃРѕР·РґР°С‚СЊ public static РєР»Р°СЃСЃ Idea.
-2. Р’ РєР»Р°СЃСЃРµ Idea СЃРѕР·РґР°С‚СЊ РјРµС‚РѕРґ public String getDescription().
-3. РњРµС‚РѕРґ getDescription РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ Р»СЋР±СѓСЋ СЃС‚СЂРѕРєСѓ.
-4. Р’ РєР»Р°СЃСЃРµ Solution СЃРѕР·РґР°Р№ РјРµС‚РѕРґ public static void printIdea(Idea idea).
-5. РњРµС‚РѕРґ printIdea РґРѕР»Р¶РµРЅ РІС‹РІРѕРґРёС‚СЊ РѕРїРёСЃР°РЅРёРµ РёРґРµРё РЅР° СЌРєСЂР°РЅ.*/
+1. В классе Solution создать public static класс Idea.
+2. В классе Idea создать метод public String getDescription().
+3. Метод getDescription должен возвращать любую строку.
+4. В классе Solution создай метод public static void printIdea(Idea idea).
+5. Метод printIdea должен выводить описание идеи на экран.*/
 
 public class Solution {
+
+    public static void printIdea(Idea idea) { //4. В классе Solution создай метод public static void printIdea(Idea idea).
+        System.out.println(idea.getDescription());
+    }
+
     public static void main(String[] args) {
         printIdea(new Idea());
     }
 
-    //РЅР°РїРёС€РёС‚Рµ С‚СѓС‚ РІР°С€ РєРѕРґ
+    //напишите тут ваш код
+    public static class Idea {//1. В классе Solution создать public static класс Idea.
+
+        public String getDescription() { //2. В классе Idea создать метод public String getDescription().
+            return "Ух тыыы, новая идея"; //3. Метод getDescription должен возвращать любую строку.
+        }
+
+    }
 }

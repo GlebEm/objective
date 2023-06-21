@@ -21,17 +21,17 @@ public class Cat {
         catCount++;
     }
 
-    public static int getCatCount() {
-        //напишите тут ваш код
-
+    public static int getCatCount() { //1. Добавь в класс метод getCatCount.
+       return Cat.catCount; //3. Метод getCatCount должен возвращать значение переменной catCount.
+       //напишите тут ваш код
     }
-
-    public static void setCatCount(int catCount) {
+    public static void setCatCount(int catCount) { //5. Метод setCatCount ничего не должен возвращать. 4. Добавь в класс метод setCatCount, принимающий int.
+        Cat.catCount = catCount; //6. Метод setCatCount должен присваивать переменной catCount переданное значение.*/
         //напишите тут ваш код
-
     }
-
     public static void main(String[] args) {
-
+        setCatCount(9);
+        int n = getCatCount();
+        System.out.println(n);
     }
 }

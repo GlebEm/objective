@@ -21,8 +21,19 @@ public class Solution {
     public static void main(String[] args) {
         Duck duck1 = new Duck();
         Duck duck2 = new Duck();
+        Cat cat1 = new Cat();
+        Cat cat2 = new Cat();
+        Dog dog1 = new Dog();
+        Dog dog2 = new Dog();
         System.out.println(duck1);
         System.out.println(duck2);
+        System.out.println(cat1);
+        System.out.println(cat2);
+        System.out.println(dog1);
+        System.out.println(dog2);
+        //5. В методе main создай два объекта типа Cat.
+        //6. В методе main создай два объекта типа Dog.
+        //7. Выведи все созданные объекты на экран.*/
 
         //напишите тут ваш код
     }
@@ -33,5 +44,16 @@ public class Solution {
         }
     }
 
+    public static class Cat { //1. Создай класс Cat(кошка).
+        public String toString() { //3. У класса Cat должен быть верно реализован метод toString.
+            return "Cat";
+        }
+    }
+
+    public static class Dog { //2. Создай класс Dog(собака)
+        public String toString() { //4. У класса Dog должен быть верно реализован метод toString.
+            return "Dog";
+        }
+    }
     //напишите тут ваш код
 }

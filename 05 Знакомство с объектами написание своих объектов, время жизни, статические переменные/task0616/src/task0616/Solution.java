@@ -12,17 +12,17 @@ Requirements:
 4. Программа должна выводить текст на экран.*/
 
 public class Solution {
-    public int step;
+    public static int step; //1
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //2
         method1();
     }
 
-    public void method1() {
+    public static void method1() { //3
         method2();
     }
 
-    public void method2() {
+    public static void method2() { //4
         new Solution().method3();
     }
 

@@ -30,7 +30,10 @@ public class Circle {
     }
 
     public Circle(double x, double y) {
-        //напишите тут ваш код
+       this(x,y,10); //2. Конструктор с двумя параметрами должен инициализировать переменные x и y переданными значениями.
+       //3. Конструктор с двумя параметрами должен инициализировать переменную radius значением 10.
+        //4. Конструктор с двумя параметрами должен вызывать другой конструктор, передав в него верные значения параметров.
+       //напишите тут ваш код
     }
 
     public Circle() {
@@ -40,7 +43,7 @@ public class Circle {
     public static void main(String[] args) {
         Circle circle = new Circle();
         System.out.println(circle.x + " " + circle.y + " " + circle.radius);
-        Circle anotherCircle = new Circle(10, 5);
+        Circle anotherCircle = new Circle(5, 5);
         System.out.println(anotherCircle.x + " " + anotherCircle.y + " " + anotherCircle.radius);
     }
 }

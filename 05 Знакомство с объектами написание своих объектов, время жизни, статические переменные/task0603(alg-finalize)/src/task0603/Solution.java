@@ -14,7 +14,12 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        for (int i = 0; i < 50000; i++) {
+            Cat cat = new Cat();
+            for (int j = 0; j < 50000; j++) {
+                Dog dog = new Dog();
+            }// напишите тут ваш код
+        }
     }
 }
 
